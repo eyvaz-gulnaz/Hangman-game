@@ -1,0 +1,307 @@
+body{
+    background-image: url(hang.jpg);
+    background-size:100% 100%;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    user-select: none;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: antiquewhite;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 3;
+    display: none;
+}
+h1{
+    font-size: 8em;
+    font-weight: 200;
+    width: fit-content;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    color: white;
+    text-shadow: 
+        -5px 0 rgb(16, 16,75),
+        0 5px rgb(16, 16, 75),
+        5px 0 rgb(16, 16, 75),
+        0 -5px rgb(16, 16, 75);
+}
+.container-inside{
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    padding: 2em 0;
+    justify-content: space-between;
+    position: relative;
+}
+.img{
+    background-image: url(https://k-buffum.github.io/Project1WDI/images/hangmanBase.jpg);
+    transform: scaleX(-1);
+    background-size: 100% 100%;
+    background-color: antiquewhite ;
+    min-width: 350px;
+    height: 400px;
+    position: relative;
+}
+.options{
+    width: 100%;
+    text-align: center;
+
+}
+.options-word{
+    width: 60%;
+}
+.options h3{
+    font-size: 3em;
+    color: rgb(23, 114, 23);
+    letter-spacing: 1px;
+}
+.options button{
+    padding: 4px 1.2rem;
+    font-size: 1.5em;
+    border: none;
+    margin: 1em;
+    color: white;
+    border-radius: 20px;
+    background-color: rgb(87, 122, 87);
+}
+.options button:hover {
+    opacity: 0.7;
+}
+.guessing-word{
+    margin: 0 auto;
+    margin-top: 2.4em;
+    font-size: 2em;
+    width: fit-content;
+}
+.keyboard{
+    background-color: rgba(139, 69, 19, 0.61);;
+    border: 8px solid rgba(139, 69, 19, 0.61);
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: space-evenly;
+    min-height: 150px;
+    margin: 0 auto;
+    padding: 2px
+}
+.letter{
+    width: 126.2px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(139, 69, 19, 0.61);
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: antiquewhite;
+    background-color: rgb(87, 122, 87);
+}
+
+.letter:hover{
+    background-color: antiquewhite;
+    color: rgba(139, 69, 19, 0.61)
+}
+.letter:active{
+    background-color: rgb(240, 190, 126);
+}
+.start-again:active {
+    background-color: green
+}
+.guessLetter{
+    padding: 0 5px;
+}
+.pop-up {
+    width: 760px;
+    height: 350px;
+    visibility: hidden;
+    border: 2px solid rgb(82, 53, 53);
+    font-size: 4em;
+    color: rgb(82, 53, 53);
+    z-index: 5;
+    position: absolute;
+    background-color:yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    right: 30px;
+}
+.start-again{
+    padding: 4px 10px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(82, 53, 53);
+    border-radius: 12px;
+    outline: none;
+    border: none;
+}
+.start-again:hover{
+    color: rgb(82, 53, 53);
+    background-color: white;
+    border: 2px solid rgb(82, 53, 53);;
+}
+/* body parts */
+.head{
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    z-index: 3;
+    position:absolute;
+    left: 105px;
+    top: 98px;
+}
+.body{
+    width: 20px;
+    height: 90px;
+    border: 2px solid black;
+    border-radius: 50%;
+    z-index: 3;
+    position: absolute;
+    left: 115px;
+    top: 138px;
+}
+.leftHand{
+    width: 2px;
+    rotate: 135deg;
+    height: 50px;
+    border: 1px solid black;
+    z-index: 3;
+    position: absolute;
+    left: 148px;
+    top: 138px;
+}
+.rightHand{
+    rotate: 45deg;
+    width: 2px;
+    height: 50px;
+    border: 1px solid black;
+    z-index: 3;
+    position: absolute;
+    left: 100px;
+    top: 138px;
+}
+.leftLeg{
+    width: 2px;
+    rotate: 135deg;
+    height: 70px;
+    border: 1px solid black;
+    z-index: 3;
+    position: absolute;
+    left: 148px;
+    top: 218px;
+}
+.rightLeg{
+    rotate: 45deg;
+    width: 2px;
+    height: 70px;
+    border: 1px solid black;
+    z-index: 3;
+    position: absolute;
+    left: 98px;
+    top: 218px;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+            font-size: 4em;
+            width:fit-content;
+            text-shadow:
+                -2px 0 rgb(16, 16, 75),
+                0 2px rgb(16, 16, 75),
+                2px 0 rgb(16, 16, 75),
+                0 -2px rgb(16, 16, 75);
+        }
+        .container{
+            min-height: 130vh;
+        }
+        .container-inside {
+            padding: 10px;
+            width: 100%;
+            flex-direction: column-reverse;
+        }
+        .img {
+            width: 280px;
+            height: 350px;
+        }
+        .options-word{
+            width: 100%;
+        }
+        .options {
+            width: 100%;
+            text-align: center;
+            font-size: 2em;
+        }
+        .options h3 {
+            font-size: 1.5em;
+            color: rgb(23, 114, 23);
+            letter-spacing: 1px;
+        }
+
+        .options button {
+            padding: 2px 1rem;
+            font-size: 25px;
+            margin: 10px;
+        }
+                .keyboard {
+                    border: 8px double rgb(71, 44, 44);
+                    width: 78%;
+                    height: 160px;
+                    gap: 0;
+                    padding: 0;
+                }
+                .letter{
+                    width: 40px;
+                }
+        .pop-up {
+            width: 440px;
+            height: 380px;
+            font-size: 3em;
+        }
+}
+@media screen and (max-width: 980px) and (min-width: 600px) {
+    .pop-up {
+            width: 410px;
+            height: 400px;
+        }
+
+    h1{
+        font-size: 6em;
+    }
+
+        .container-inside {
+            width: 95%;
+        }
+    
+        .options-word {
+            width: 100%;
+        }
+                .options h3 {
+                    font-size: 2.2em;
+                }
+    
+        .options button {
+            display: block;
+            margin-left: 3em;
+        }
+        
+        .keyboard {
+            width: 90%;
+        }
+        .letter {
+            width: 100px;
+        }
+        .keyboard .z {
+            width: 100px;
+        }
+
+}
