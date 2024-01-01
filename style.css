@@ -255,7 +255,9 @@ h1{
                 .keyboard {
                     border: 8px double rgb(71, 44, 44);
                     width: 78%;
-                    height: 160px;
+                    height: 200px;
+                    max-width: 90%;
+                    width: 300px;
                     gap: 0;
                     padding: 0;
                 }
